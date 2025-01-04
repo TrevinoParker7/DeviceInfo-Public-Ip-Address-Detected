@@ -45,7 +45,7 @@ DeviceInfo
 ---
 
 ## Created By:
-- **Author Name**: Sijia Li
+- **Author Name**: Trevino Parker
 - **Author Contact**: https://www.linkedin.com/in/trevinoparker/
 - **Date**: Jan 1, 2025
 
