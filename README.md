@@ -64,4 +64,4 @@ DeviceInfo
 ## Revision History:
 | **Version** | **Changes**                   | **Date**         | **Modified By**   |
 |-------------|-------------------------------|------------------|-------------------|
-| 1.0         | Initial draft                  | `Jan 6, 2025`  | `Trevino Parker`   
+| 1.0         | Initial draft                  | `Jan 1, 2025`  | `Trevino Parker`   
