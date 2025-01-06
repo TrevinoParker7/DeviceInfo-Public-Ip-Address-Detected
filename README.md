@@ -32,7 +32,8 @@ DeviceInfo
 <img width="760" alt="image" src="https://github.com/user-attachments/assets/0681069a-2f5f-4beb-9253-ae89558b1981">
 
 ---
-
+ Several bad actors have been discovered attempting to log into target machine
+ 
 DeviceLogonEvents
 | where DeviceName == "windows-target-1"
 | where LogonType has_any("Network", "Interactive", "RemoteInteractive", "Unlock")
@@ -43,7 +44,23 @@ DeviceLogonEvents
 
 ![Screenshot 2025-01-06 143441](https://github.com/user-attachments/assets/17ba8bdd-bd3b-4469-a374-15046cf45b1c)
 
+---
 
+The top 5 most failed login attempt IP addresses have not been able to successfully break into VM.
+
+let RemoteIPsInQuestion = dynamic(["87.251.75.99","194.180.49.96", "194.180.48.11", "149.102.152.2", "141.98.11.191", "92.63.197.55", "185.7.214.87"]);
+DeviceLogonEvents
+| where LogonType has_any("Network", "Interactive", "RemoteInteractive", "Unlock")
+| where ActionType == "LogonSuccess"
+| where RemoteIP has_any(RemoteIPsInQuestion)
+
+<Query no results>
+
+---
+
+The only successful remote/network logins in the last 30 days for 'labuser' account
+
+   
 **📝 Response:**  
    - Shared findings with the manager, the device was isolated, awaiting further instructions.
 
