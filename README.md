@@ -172,4 +172,3 @@ This chart clearly organizes the MITRE ATT&CK techniques (TTPs) used in this inc
 | 1.0         | Initial draft                  | `Jan 2025`    | `Trevino Parker`   |
 ```
 
-This markdown is formatted and structured for easy understanding and future additions in GitHub.
