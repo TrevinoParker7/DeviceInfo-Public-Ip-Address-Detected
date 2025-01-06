@@ -131,7 +131,7 @@ Here's how the relevant TTPs and detection elements can be organized into a char
 This chart clearly organizes the MITRE ATT&CK techniques (TTPs) used in this incident, detailing their relevance to the detection process.
 
 **📝 Response:**  
-- Shared findings with the manager, the device was isolated, awaiting further instructions.
+- Hardened the NSG attached to windows-target-1 to allow only RDP traffic from specific endpoints (no public internet access), Implemented account lockout policy, Implemented MFA, awaiting further instructions.
 
 ---
 
