@@ -113,7 +113,7 @@ Here's how the relevant TTPs and detection elements can be organized into a char
 
 ---
 
-# MITRE ATT&CK TTPs for Incident Detection
+# 🛡️ MITRE ATT&CK TTPs for Incident Detection
 
 | **TTP ID** | **TTP Name**                     | **Description**                                                                                          | **Detection Relevance**                                                         |
 |------------|-----------------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
