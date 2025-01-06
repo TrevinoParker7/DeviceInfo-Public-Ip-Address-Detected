@@ -24,11 +24,13 @@ DeviceInfo
 | order by Timestamp desc
 ```
 
----
-
 ## Sample Output:
 <img width="760" alt="image" src="https://github.com/user-attachments/assets/0681069a-2f5f-4beb-9253-ae89558b1981">
 
+---
+
+**📝 Response:**  
+   - Shared findings with the manager, the device was isolated, awaiting further instructions.
 
 ## Steps to Reproduce:
 1. Provision a virtual machine with a public IP address
