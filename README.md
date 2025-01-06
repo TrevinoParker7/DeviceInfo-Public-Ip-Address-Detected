@@ -2,7 +2,7 @@
 **Detection of Internet-facing sensitive assets**
 
 ## Example Scenario:
-Internal shared services device (e.g., a domain controller) is mistakenly exposed to the internet due to misconfiguration.
+During routine maintenance, the security team is tasked with investigating any VMs in the shared services cluster (handling DNS, Domain Services, DHCP, etc.) that have mistakenly been exposed to the public internet. The goal is to identify any misconfigured VMs and check for potential brute-force login attempts/successes from external sources. Internal shared services device (e.g., a domain controller) is mistakenly exposed to the internet due to misconfiguration.
 
 ---
 
@@ -15,7 +15,11 @@ Internal shared services device (e.g., a domain controller) is mistakenly expose
 
 ---
 
-## Detection Query:
+### **Timeline Overview**  
+1. **🔍 Archiving Activity:**  
+   - **Observed Behavior:**  Windows-target-1 has been internet facing for several day.Last Internet facing time 2025-01-06T19:15:05.9710276Z."
+  
+   - **Detection Query 
 ```kql
 DeviceInfo
 //| where DeviceName == "ms-edr" // Optional for specific device(s)
@@ -28,6 +32,17 @@ DeviceInfo
 <img width="760" alt="image" src="https://github.com/user-attachments/assets/0681069a-2f5f-4beb-9253-ae89558b1981">
 
 ---
+
+DeviceLogonEvents
+| where DeviceName == "windows-target-1"
+| where LogonType has_any("Network", "Interactive", "RemoteInteractive", "Unlock")
+| where ActionType == "LogonFailed"
+| where isnotempty(RemoteIP)
+| summarize Attempts = count() by ActionType, RemoteIP, DeviceName
+| order by Attempts
+
+![Screenshot 2025-01-06 143441](https://github.com/user-attachments/assets/17ba8bdd-bd3b-4469-a374-15046cf45b1c)
+
 
 **📝 Response:**  
    - Shared findings with the manager, the device was isolated, awaiting further instructions.
