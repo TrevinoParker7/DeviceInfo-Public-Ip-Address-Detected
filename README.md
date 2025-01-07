@@ -1,5 +1,5 @@
 
-
+![image (5)](https://github.com/user-attachments/assets/8a686a3b-791e-40f5-89dd-5d6586bb47d1)
 
 # 🔍Use Case
 **Detection of Internet-facing sensitive assets**
