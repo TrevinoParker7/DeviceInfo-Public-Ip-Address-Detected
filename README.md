@@ -32,7 +32,7 @@ During routine maintenance, the security team is tasked with investigating any V
    ```
 
 ## Sample Output:
-![Screenshot 2025-01-13 141118](https://github.com/user-attachments/assets/419b7fc0-e838-491f-9283-b97747fd4c58)
+![Screenshot 2025-01-13 141429](https://github.com/user-attachments/assets/52e33697-5539-4614-8148-ea9da55fc4c5)
 
 ---
 
