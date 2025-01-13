@@ -1,8 +1,6 @@
+# 🔍**Detection of Internet-facing sensitive assets**
 
 ![image (5)](https://github.com/user-attachments/assets/8a686a3b-791e-40f5-89dd-5d6586bb47d1)
-
-# 🔍Use Case
-**Detection of Internet-facing sensitive assets**
 
 ## Example Scenario:
 During routine maintenance, the security team is tasked with investigating any VMs in the shared services cluster (handling DNS, Domain Services, DHCP, etc.) that have mistakenly been exposed to the public internet. The goal is to identify any misconfigured VMs and check for potential brute-force login attempts/successes from external sources. Internal shared services device (e.g., a domain controller) is mistakenly exposed to the internet due to misconfiguration.
