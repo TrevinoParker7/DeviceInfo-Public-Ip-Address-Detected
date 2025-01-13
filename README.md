@@ -20,19 +20,19 @@ During routine maintenance, the security team is tasked with investigating any V
 
 ### **Timeline Overview**  
 1. **🔍 Archiving Activity:**  
-   - **Observed Behavior:**  Windows-target-1 has been internet-facing for several days. Last Internet facing time: `2025-01-06T19:15:05.9710276Z`
+   - **Observed Behavior:**  Windows-target-1 has been internet-facing for several days, the public IPAddress was in the Logs. Last Internet facing time: `2025-01-06T19:15:05.9710276Z`
   
    - **Detection Query:**
-   ```kql
-   DeviceInfo
-   //| where DeviceName == "ms-edr" // Optional for specific device(s)
-   | where isnull(IsInternetFacing) or IsInternetFacing == false
-   | project Timestamp, DeviceName, OSPlatform, PublicIP, IsInternetFacing
-   | order by Timestamp desc
-   ```
+```kql
+  DeviceInfo
+| where DeviceName == "windows-target-1" 
+| where IsInternetFacing == true
+| order by Timestamp desc
+```
 
 ## Sample Output:
-![Screenshot 2025-01-13 141429](https://github.com/user-attachments/assets/52e33697-5539-4614-8148-ea9da55fc4c5)
+
+![Screenshot 2025-01-13 152413](https://github.com/user-attachments/assets/96ce0467-2bf1-4b83-94d3-5dac66c828c6)
 
 ---
 
